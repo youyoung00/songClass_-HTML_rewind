@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript 2Day_Quiz3</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+        <!-- *자바스크립트의 html 컨트롤 
+            1. js는 script 태그, 외부파일 임포트 등의 방법으로 html를 추가하거나 수정할 수 있음.
+            2. 방법1: innerHTML
+            3. 방법2: write();
+            4. 주의! : 외부 script에서 body태그를 제어할 경우, body내 태그들은 화면에 안나옴. 
+        --> 
+
+    <body id="body">
+
+        <p><h1>자바스크립트</h1></p> 
+
+    </body>
+
+    <script>
+        const bodyel = document.getElementById("body");
+        bodyel.innerHTML = "<h1>자바스크립트 innerHTML</h1>";
+
+        document.write("<h2>자바스크립트 write();</h2>");
+    </script>
+</html>
