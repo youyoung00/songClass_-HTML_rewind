@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript 2Day_Quiz1</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+
+        <div class="container mt-3">
+            <button id="btn" type="button" class="btn btn-warning">텍스트입력</button>
+            <p id="text"></p>
+            <div id="btns" style="display: none;">
+                <button id="redBtn" type="button" class="btn btn-danger">빨강</button>
+                <button id="greenBtn" type="button" class="btn btn-success">초록</button>
+                <button id="blueBtn" type="button" class="btn btn-primary">파랑</button>
+            </div>
+        </div>
+
+        <!-- *퀴즈1 1. 텍스트 값을 입력받고 2. 값이 없으면 "텍스트 값을 입력해주세요" 경고창의 띄우고 3. 값이 있으면 가운데 크게
+        텍스트를 표시해주고 4. 바로 아래에 빨강/파랑/초록 글자가 쓰여진 버튼이 생긴다. 5. 빨강 파랑 초록이 쓰여진 버튼을 누르면 "무슨
+        무슨색으로 변경됩니다." 라고 경고창이 뜨면서 6. 입력된 텍스트의 색이 변경되게 해봅시다. -->
+    </body>
+
+    <script>
+
+        document.getElementById("btn").addEventListener("click", function () {
+                inputTxt();
+            });
+
+        function inputTxt() {
+            var txt = prompt("텍스트를 입력하세요!");
+            document.getElementById("text").innerHTML = txt;
+            document.getElementById("btns").style.display = "block"
+        }
+
+
+        document.getElementById("redBtn").addEventListener("click",function(){
+            document.getElementById("text").style.color = "red";
+        });
+        document.getElementById("blueBtn").addEventListener("click",function(){
+            document.getElementById("text").style.color = "blue";
+        });
+        document.getElementById("greenBtn").addEventListener("click",function(){
+            document.getElementById("text").style.color = "green";
+        });
+    </script>
+</html>
