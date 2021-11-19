@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript 3Day_Quiz1</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+
+        <!-- *퀴즈1 1. 이벤트 버튼 2. 프롬프트 입력 두자리 받기 3. 숫자 체크 4. 0 이상인지 확인 5. 테이블 코드를 변수로 입력 6.
+        document.write(); -->
+
+        
+
+        <div class="container mt-3">
+            <button id="btn" type="button" class="btn btn-success">테이블 만들기</button>
+        </div>
+
+    </body>
+
+    <script>
+
+        btn.addEventListener("click", function () {
+            inputRowCol();
+        });
+
+        function inputRowCol() {
+            var rowNum = prompt("칸을 입력하세요.");
+            var colNum = prompt("줄을 입력하세요.");
+
+            rowNum = Number(rowNum);
+            colNum = Number(colNum);
+
+            if (isNaN(colNum) == true || isNaN(rowNum) == true) {
+                alert("문자가 아닌 <숫자>로 입력해주세요");
+                inputRowCol();
+            } else if (colNum <= 0 || rowNum <= 0) {
+                alert("0보다 큰 <실수>로 입력해주세요");
+                inputRowCol();
+            } else {
+                makeTable(rowNum, colNum);
+            }
+
+        }
+
+        function makeTable(rowNum, colNum) {
+            var table = "<table border='1'>";
+
+            for (var i = 0; i < rowNum; i++) {
+                table = table + "<tr>";
+
+                for (var j = 0; j < colNum; j++) {
+                    table = table + "<td>칸</td>";
+                }
+
+                table = table + "</tr>";
+            }
+
+            table = table + "</table>";
+
+            document.write(table);
+        }
+    </script>
+</html>
