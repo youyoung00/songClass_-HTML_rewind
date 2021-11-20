@@ -1,0 +1,55 @@
+
+<html >
+    <head>
+        <title>JavaScript 3Day_Quiz4</title>
+        <style>
+
+            div{
+                border: 1px solid #cccccc;
+                width: 200px;
+            }
+
+            body{
+                padding-left: 50px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div id="search">검색어를 입력해주세요.</div> <br>
+        <button id="naver" type="button">네이버</button>
+        <button id="google" type="button">구글</button>
+        <button id="daum" type="button">다음</button>
+
+    </body>
+
+    <script>
+
+        // 과제 키워드 : javaScript Window Open -> 검색 버튼 한번에 세 포털 검색창 나오기!!
+        document.getElementById("search").addEventListener("click", function(){
+            let keyword = prompt("검색어를 입력해주세요.");
+            
+            document.getElementById("search").innerText = keyword;
+        });
+
+        document.getElementById("naver").addEventListener("click", function(){
+            let keyword = document.getElementById("search").innerText;
+            console.log(keyword);
+            location.href="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query="+ keyword;
+        });
+
+        document.getElementById("google").addEventListener("click", function(){
+            let keyword = document.getElementById("search").innerText;
+            location.href="https://www.google.com/search?q="+keyword;
+        });
+
+        document.getElementById("daum").addEventListener("click", function(){
+            let keyword = document.getElementById("search").innerText;
+            location.href="https://search.daum.net/search?nil_suggest=btn&w=tot&DA=SBC&q="+keyword;
+        });
+
+    </script>
+</html>
+
