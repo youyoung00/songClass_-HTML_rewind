@@ -1,20 +1,18 @@
-
 <html >
     <head>
-            <style>
+        <style>
 
-                .btn{
-                    display: inline-block;
-                    border-radius: 10px;
-                    border: solid;
-                    background-color: gray;
-                    color: white;
-                    font-size: 30px;
-                    width: 200px;
-                    height: 100px;
-                }
-
-            </style>
+            .btn {
+                display: inline-block;
+                border-radius: 10px;
+                border: solid;
+                background-color: gray;
+                color: white;
+                font-size: 30px;
+                width: 200px;
+                height: 100px;
+            }
+        </style>
     </head>
     <body>
 
@@ -22,52 +20,92 @@
             <div id="btns">
                 <button id="html" class="btn" type="button">html</button>
                 <button id="css" class="btn" type="button">css</button>
-                <button id="js"class="btn" type="button">js</button>
+                <button id="js" class="btn" type="button">js</button>
             </div>
         </div>
 
-            <!-- *퀴즈1
-        1. 배경이 회색이고 텍스트가 하얀 메뉴가 3개 있습니다.
-        2. 마우스로 메뉴를 클릭하면 한 메뉴만 배경이 하얗게 외곽선은 검게 텍스트는 검게 변합니다. 
-        3. 다른메뉴를 클릭하면 아까 클릭한 메뉴는 원래대로 돌아오고 클릭한 메뉴가 변화합니다. -->
+        <!-- *퀴즈1 1. 배경이 회색이고 텍스트가 하얀 메뉴가 3개 있습니다. 2. 마우스로 메뉴를 클릭하면 한 메뉴만 배경이 하얗게 외곽선은
+        검게 텍스트는 검게 변합니다. 3. 다른메뉴를 클릭하면 아까 클릭한 메뉴는 원래대로 돌아오고 클릭한 메뉴가 변화합니다. -->
 
     </body>
 
     <script>
 
-        document.getElementById("html").addEventListener("click",function(){
-            change("html");
-            
-        });
-        document.getElementById("css").addEventListener("click",function(){
-            change("css");
-            
-        });
-        document.getElementById("js").addEventListener("click",function(){
-            change("js");
-            
-        });
+        document
+            .getElementById("html")
+            .addEventListener("click", function () {
+                change("html");
 
-        function change(name){
+            });
+        document
+            .getElementById("css")
+            .addEventListener("click", function () {
+                change("css");
+
+            });
+        document
+            .getElementById("js")
+            .addEventListener("click", function () {
+                change("js");
+
+            });
+
+        function change(name) {
             reset();
-            document.getElementById(name).style.backgroundColor = "white";
-            document.getElementById(name).style.borderColor = "black";
-            document.getElementById(name).style.color = "black";
-            
+            document
+                .getElementById(name)
+                .style
+                .backgroundColor = "white";
+            document
+                .getElementById(name)
+                .style
+                .borderColor = "black";
+            document
+                .getElementById(name)
+                .style
+                .color = "black";
+
         }
 
-        function reset(){
-                document.getElementById("html").style.backgroundColor = "gray";
-                document.getElementById("html").style.borderColor = "white";
-                document.getElementById("html").style.color = "white";
+        function reset() {
+            document
+                .getElementById("html")
+                .style
+                .backgroundColor = "gray";
+            document
+                .getElementById("html")
+                .style
+                .borderColor = "white";
+            document
+                .getElementById("html")
+                .style
+                .color = "white";
 
-                document.getElementById("css").style.backgroundColor = "gray";
-                document.getElementById("css").style.borderColor = "white";
-                document.getElementById("css").style.color = "white";
+            document
+                .getElementById("css")
+                .style
+                .backgroundColor = "gray";
+            document
+                .getElementById("css")
+                .style
+                .borderColor = "white";
+            document
+                .getElementById("css")
+                .style
+                .color = "white";
 
-                document.getElementById("js").style.backgroundColor = "gray";
-                document.getElementById("js").style.borderColor = "white";
-                document.getElementById("js").style.color = "white";
+            document
+                .getElementById("js")
+                .style
+                .backgroundColor = "gray";
+            document
+                .getElementById("js")
+                .style
+                .borderColor = "white";
+            document
+                .getElementById("js")
+                .style
+                .color = "white";
         }
     </script>
 </html>
