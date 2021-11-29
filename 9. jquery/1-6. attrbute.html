@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>jquery</title>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+        <style></style>
+    </head>
+
+    <body>
+        <button id="change">값 변경</button>
+        <button id="nowval">현재 값</button>
+
+        <input type="text" id="text" value="123">
+    </body>
+    <script>
+
+        $(function(){
+            $('#change').on('click', function(){
+                let text = prompt('변경할 값 입력');
+                $('#text').attr('value',text);
+            })
+            $('#nowval').on('click', function(){
+                let text = $('#text').attr('value');
+                alert(text);
+            })
+        })
+
+    </script>
+</html>

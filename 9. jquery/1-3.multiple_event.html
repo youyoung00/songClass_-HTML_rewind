@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>jquery</title>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+        <style></style>
+    </head>
+
+    <body>
+        <button id="btn">다중이벤트버튼</button>
+    </body>
+    <script>
+
+        $(function () {
+            $('#btn').on({
+                mouseover: function () {
+                    console.log('마우스 올라감');
+                },
+                click: function () {
+                    console.log('클릭');
+                }
+
+            })
+
+            $('#btn').on({
+                mouseout: function () {
+                    console.log('마우스 나감')
+                },
+                mouseover: function () {
+                    console.log('마우스 올라감2');
+                }
+
+            })
+        })
+    </script>
+</html>
