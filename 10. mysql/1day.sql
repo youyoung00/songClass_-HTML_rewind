@@ -45,6 +45,8 @@ SELECT
 FROM 
     selftable;
 
+use selfstudy;
+
 SELECT 
     blackplayer, whiteplayer, result
 FROM 
@@ -69,3 +71,29 @@ WHERE
 DROP TABLE selftable;
 
 TRUNCATE TABLE selftable;
+
+CREATE TABLE baduk_users(
+    _id INT AUTO_INCREMENT,
+    로그인ID VARCHAR(32) NOT NULL,
+    name VARCHAR(32) NOT NULL,
+    gender CHAR not null,
+    birth DATETIME,
+    level INT,
+    address VARCHAR(50),
+    PRIMARY KEY (_id)   
+) ENGINE = INNODB default character set utf8 collate utf8_general_ci;
+
+TRUNCATE TABLE baduk_users;
+
+DROP TABLE baduk_users;
+
+DELETE 
+    
+FROM 
+    baduk_users
+WHERE 
+    gender = 0;
+
+
+
+
