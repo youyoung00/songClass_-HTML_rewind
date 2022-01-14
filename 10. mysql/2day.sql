@@ -98,6 +98,15 @@ SET
     level = 0 
 WHERE 
     commu_user.level = < 19; 
+
+
+SELECT 
+    age, count(*) as age_cut
+FROM 
+    parent
+GROUP BY 
+    age;
+
     
 
 
