@@ -1,8 +1,4 @@
 
-
-
-
-
 CREATE TABLE selfstudy.commu_user(
     _id INT AUTO_INCREMENT,
     nickname VARCHAR(10) DEFAULT 'guest',
