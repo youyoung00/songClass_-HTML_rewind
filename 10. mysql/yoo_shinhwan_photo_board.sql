@@ -15,7 +15,7 @@
 CREATE TABLE user (
   _id INT AUTO_INCREMENT COMMENT '회원 고유번호', 
   email VARCHAR(30) NOT NULL COMMENT '이메일',
-  nickName VARCHAR(30) NOT NULL COMMENT '대화명'
+  nickName VARCHAR(30) NOT NULL COMMENT '대화명',
   pw INT NOT NULL COMMENT '비밀번호'
   PRIMARY KEY(_id)
 ) ENGINE = INNODB default character set utf8 collate utf8_general_ci; 
